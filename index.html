@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image SLider</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="gallery-wrap">
+        <img id="backbtn" src="images/back.png">
+        <div class="gallery">
+            <div>
+                <span> <img src="images/image-1.png"></span>
+                <span><img src="images/image-2.png"></span>
+                <span> <img src="images/image-3.png"></span>
+    
+            </div>
+            <div>
+                <span> <img src="images/image-4.png"></span>
+                <span> <img src="images/image-5.png"></span>
+                <span> <img src="images/image-6.png"></span>
+            </div>
+        </div>
+        <img id="nextbtn" src="images/next.png">
+
+    </div>
+    
+<script >
+    const scrollArea=document.querySelector(".gallery")
+    const prevbtn=document.getElementById("backbtn")
+    const nextbtn=document.getElementById("nextbtn")
+
+    prevbtn.addEventListener("click",()=>{
+        scrollArea.style.scrollBehavior="smooth"
+        scrollArea.scrollLeft-=800
+    })
+
+ nextbtn.addEventListener("click",()=>{
+    scrollArea.style.scrollBehavior="smooth"
+    scrollArea.scrollLeft+=800
+ })
+</script>
+</body>
+</html>
